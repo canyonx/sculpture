@@ -1,0 +1,8 @@
+<!-- 360 Photo -->
+<div class="is-flex is-align-items-center" style="min-height:100vh">
+	<div class="cloudimage-360" data-folder="{{ asset(images_dir ~ product.slug ~ '/') }}" data-filename="{{ product.slug }}-{index}.jpg" data-amount="{{ nbimages }}" style="width: auto"></div>
+</div>
+
+{% block javascripts %}
+	<script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js?func=proxy"></script>
+{% endblock %}

@@ -1,0 +1,13 @@
+<div class="wrapper-container card">
+	<div class="wrapper is-flex is-align-items-center">
+		<div class="card-image">
+			<figure class="image">
+				<img src="{{ asset(images_dir ~ w.picture) }}" alt="{{ w.name }}">
+			</figure>
+		</div>
+
+	</div>
+	<footer class="card-content has-text-centered has-background-light">
+		<a href="{{ path('product', {'slug': w.slug}) }}" class="button is-gost">Explorer...</a>
+	</footer>
+</div>

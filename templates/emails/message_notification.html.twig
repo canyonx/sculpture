@@ -1,0 +1,13 @@
+{% extends '@email/default/notification/body.html.twig' %}
+
+{% block content %}
+	Auteur:
+	{{ message.name }}<br/>
+	Email:
+	{{ message.email }}<br/>
+	<br/>
+
+	<p>
+		{{ message.message }}
+	</p>
+{% endblock %}

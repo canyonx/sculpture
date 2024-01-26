@@ -1,0 +1,23 @@
+<section class="hero is-dark is-fullheight hero-curve" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(' {{ asset('uploads/images/' ~ setting.background) }} ') no-repeat center center fixed; background-size: cover;">
+
+	<div class="hero-head">
+		{% include "shared/_navbar.html.twig" %}
+	</div>
+
+	<div class="hero-body" style="height: 80vh">
+		<div class="container has-text-centered">
+			<div class="column is-6 is-offset-3">
+				<h1 class="title">
+					{{ setting.title }}
+				</h1>
+				<h2 class="subtitle">
+					{{ setting.subTitle }}
+				</h2>
+				<a class="button is-white" href="#sculptures">
+					Découvrir &nbsp;
+					<i class="fa fa-chevron-down"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

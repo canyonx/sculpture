@@ -1,0 +1,18 @@
+<link rel="canonical" href="{{ app.request.uri }}">
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('uploads/favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('uploads/favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('uploads/favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ asset('uploads/favicon/site.webmanifest') }}">
+
+<meta property="og:url" content="{{ app.request.uri }}">
+<meta property="og:title" content="{{ setting.title }}">
+<meta property="og:site_name" content="{{ setting.title ~ ', ' ~ setting.subTitle }}">
+<meta property="og:description" content="{{ setting.description }}">
+<meta property="og:image" content="{{ asset(images_dir ~ setting.background)}}">
+<meta property="og:image:alt" content="{{ setting.subTitle }}">
+<meta property="og:type" content="website">
+
+<meta name="description" content="{{ setting.description }}">
+<meta name="robots" content="index, follow">
+<meta name="author" content="{{ setting.title }}">

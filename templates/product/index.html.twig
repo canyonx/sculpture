@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ product.name }}
+{% endblock %}
+
+{% block body %}
+	{% include "shared/_navbar.html.twig" %}
+
+	<section class="section has-text-light">
+		<div class="container">
+
+			<div id="{{ product.name }}">
+				{% if product.is360 %}
+					{% include "product/_360.html.twig" %}
+				{% else %}
+					{# {% include "product/_gallery.html.twig" %} #}
+					{% include "product/_carousel.html.twig" %}
+				{% endif %}
+			</div>
+
+			<a href="#{{ product.name }}">
+				<h1 class="title has-text-light pt-6 has-text-centered">
+					{{ product.name }}
+				</h1>
+			</a>
+
+			<hr>
+			{% if product.description %}
+				<div class="is-size-5 m-6">{{ product.description | raw }}</div>
+			{% endif %}
+
+			<div class="table-container is-max-desktop box">
+				<table class="table has-text-centered is-fullwidth">
+					<thead>
+						<tr>
+							<th>Nom</th>
+							<th>Matière</th>
+							<th>Taille en cm (h x l x p)</th>
+							<th>Année</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{ product.name }}</td>
+							<td>{{ product.material }}</td>
+							<td>{{ product.size }}</td>
+							<td>{{ product.year }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</section>
+
+{% endblock %}

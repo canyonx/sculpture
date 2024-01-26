@@ -1,0 +1,20 @@
+<section id="a_propos" class="section is-flex is-align-items-center" style="min-height:100vh">
+	<div class="container">
+		<div class="columns is-vcentered">
+			<div class="column is-5">
+				<figure class="image is-1by1">
+					<img class="is-rounded card p-2" src="{{ asset(images_dir ~ user.avatar) | imagine_filter('artist_filter') }}" alt="Photo de {{ user.username }}">
+				</figure>
+			</div>
+			<div class="column is-6 is-offset-1">
+				<h1 class="title has-text-light">
+					A propos de l'artiste
+				</h1>
+				<hr>
+				<div class="has-text-light pb-4">
+					{{ user.about | raw }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

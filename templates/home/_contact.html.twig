@@ -1,0 +1,86 @@
+<section id="contact" class="section">
+	<div class="container">
+		<div class="columns card has-background-light p-5">
+
+			<div class="column is-5">
+				<div class="hero has-text-centered">
+					<div class="hero-head">
+						<h1 class="title has-text-info is-1 mb-8">Contact</h1>
+					</div>
+
+					<div class="hero-body">
+						<p class="m-4">
+							<i class="fa fa-location-dot"></i>&nbsp;
+							{{ user.address }}
+						</p>
+						<p class="m-4">
+							<i class="fa fa-envelope"></i>&nbsp;
+							{{ user.email }}
+						</p>
+						<p class="m-4">
+							<i class="fa fa-phone"></i>&nbsp;
+							{{ user.phone }}
+						</p>
+						<p class="m-4">
+							{% if user.instagram %}
+								<a class="p-3" href="{{ user.instagram }}">
+									<i class="fa-brands fa-instagram fa-2x"></i>
+								</a>
+							{% endif %}
+
+							{% if user.facebook %}
+								<a class="p-3" href="{{ user.facebook }}">
+									<i class="fa-brands fa-facebook fa-2x"></i>
+								</a>
+							{% endif %}
+						</p>
+					</div>
+
+					<div class="hero-footer has-text-info">
+						N’hésitez pas à me contacter pour plus d’informations
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-offset-1">
+				{% for rubrique, messages in app.flashes %}
+					<div class="message is-{{ rubrique }}">
+						{% for message in messages %}
+							<div class="message-body">
+								{{ message }}
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+
+				{{ form_start(form) }}
+				<div class="field">
+					{{ form_label(form.name, 'Votre nom') }}
+					<div class="control">
+						{{ form_widget(form.name, {'attr': {'class': 'input'}}) }}
+					</div>
+				</div>
+				<div class="field">
+					{{ form_label(form.email, 'Email') }}
+					<div class="control">
+						{{ form_widget(form.email, {'attr': {'class': 'input'}}) }}
+					</div>
+				</div>
+				<div class="field">
+					{{ form_label(form.message, 'Message') }}
+					<div class="control">
+						{{ form_widget(form.message, {'attr': {'class': 'textarea'}}) }}
+					</div>
+				</div>
+				{{ form_rest(form) }}
+				<div class="field">
+					<div class="control">
+						<button class="button is-info">Envoyer</button>
+					</div>
+				</div>
+				{{ form_end(form) }}
+			</div>
+
+		</div>
+	</div>
+</section>

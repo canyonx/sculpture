@@ -1,0 +1,15 @@
+{% for key, image in product.images %}
+
+	{% if ((key) / 2) matches '/^\\d+$/' %}
+		<div class="columns">
+		{% endif %}
+
+		<div class="column has-text-centered">
+			<img src="{{ asset(images_dir ~ product.slug ~ '/' ~ image) }}" alt="{{ image }}" width="500">
+		</div>
+
+		{% if ((key + 1) / 2) matches '/^\\d+$/' %}
+		</div>
+	{% endif %}
+
+{% endfor %}

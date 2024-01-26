@@ -1,0 +1,20 @@
+<!-- Start Carousel -->
+<div id="carousel" class="carousel has-text-centered">
+	{% for key, image in product.images %}
+		<div class="item-{{ key + 1 }} my-6 mx-2">
+			<img src="{{ asset(images_dir ~ product.slug ~ '/' ~ image) | imagine_filter('carousel_filter') }}" alt="{{ image }}" width="400">
+		</div>
+	{% endfor %}
+</div>
+<!-- End Carousel -->
+
+{% block javascripts %}
+	<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+	<script>
+		bulmaCarousel.attach( '#carousel', {
+slidesToScroll: 1,
+slidesToShow: 2,
+infinite: true
+} );
+	</script>
+{% endblock %}

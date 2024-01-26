@@ -1,0 +1,37 @@
+<nav class="navbar is-black">
+	<div class="container">
+		<div class="navbar-brand">
+			<a id="brand" class="navbar-item" href="{{ path('homepage') }}">
+				<img class="pr-2" src="{{ asset(images_dir ~ setting.logo) }}" alt="Logo">
+				<span>{{ setting.title }}</span>
+			</a>
+			<span class="navbar-burger burger" data-target="navbarMenu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</div>
+		<div id="navbarMenu" class="navbar-menu" style="background-color:transparent">
+			<div class="navbar-end">
+				<span class="navbar-item is-pulled-right">
+					<a class="button is-white is-outlined" href="{{ path('realisations') }}">
+						<span>Réalisations</span>
+					</a>
+				</span>
+
+				{% if is_granted('ROLE_ADMIN') %}
+					<span class="navbar-item is-pulled-right">
+						<a class="button" href="{{ path('admin') }}">
+							<span>Tableau de bord</span>
+						</a>
+					</span>
+					<span class="navbar-item is-pulled-right">
+						<a class="button" href="{{ path('app_logout') }}">
+							<span>Se déconnecter</span>
+						</a>
+					</span>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,12 @@
+<footer class="footer has-background-black">
+	<div class="content has-text-centered has-text-grey">
+		<p>- Création Mattéo Dauchez -</p>
+		{% if is_granted('ROLE_ADMIN') %}
+			<a class="has-text-link" href="{{ path('admin')}}">Tableau de bord</a>
+			|
+			<a class="has-text-link" href="{{ path('app_logout')}}">Se déconnecter</a>
+		{% else %}
+			<a class="has-text-link" href="{{ path('app_login')}}">Se connecter</a>
+		{% endif %}
+	</div>
+</footer>

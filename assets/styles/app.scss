@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+// Import Bulma core
+@import '../../node_modules/bulma/bulma.sass';
+
+// Import component
+@import "../../node_modules/bulma-carousel/src/sass/index.sass";
+
+@import "_variables.scss";

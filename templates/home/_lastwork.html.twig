@@ -1,0 +1,19 @@
+<section id="sculptures" class="section is-flex is-align-items-center" style="min-height:100vh">
+	<div class="container">
+		<h1 class="title has-text-light">Derniers travaux</h1>
+		<div class="columns is-multiline">
+
+			{% for w in products %}
+				<div class="column is-4">
+					{% include "shared/_card.html.twig" %}
+				</div>
+			{% endfor %}
+
+		</div>
+		<div class="has-text-centered">
+			<a class="button is-white is-outlined" href="{{ path('realisations') }}">
+				<span>Toutes les réalisations...</span>
+			</a>
+		</div>
+	</div>
+</section>

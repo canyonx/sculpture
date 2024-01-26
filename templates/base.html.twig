@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		{% include "shared/_meta.html.twig" %}
+
+		<title>
+			{% block title %}{% endblock %}
+			-
+			{{ setting.Title }}
+		</title>
+
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+	</head>
+
+	<body class="has-background-black"> {% block body %}{% endblock %}
+
+		{% include "shared/_footer.html.twig" %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</body>
+</html>

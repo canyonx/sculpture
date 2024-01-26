@@ -1,0 +1,69 @@
+$family-sans-serif: "Ubuntu", "Helvetica Neue", sans-serif;
+$table-cell-text-align: center;
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: "Ubuntu", "Noto Serif", "Helvetica Neue", sans-serif;
+}
+
+.hero .nav,
+.hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.hero .subtitle {
+  padding: 3rem 0;
+  line-height: 1.5;
+}
+
+/*** hero curve css***/
+@media only screen and (min-width: 769px) {
+  .hero-curve {
+    display: block;
+    box-sizing: border-box;
+    height: 500px;
+    background-color: hsl(0, 0%, 21%);
+    clip-path: ellipse(75% 100% at 65% 0%);
+  }
+
+  .hero-curve .container {
+    vertical-align: middle;
+  }
+}
+
+/** hover on brand **/
+#brand:hover {
+  background-color: transparent;
+  border-bottom: solid 2px whitesmoke;
+  border-top: solid 2px transparent;
+}
+
+/* sticky footer card */
+.wrapper-container {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+/* cloud image height */
+.cloudimage-360-inner-box {
+  display: flex;
+  justify-content: center;
+}
+
+.cloudimage-360-inner-box canvas {
+  max-height: 90vh;
+  width: auto !important;
+  max-width: 600px;
+}
+
+.table th:not([align]) {
+  text-align: center;
+}
